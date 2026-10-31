@@ -15,8 +15,8 @@ df_all = get_data()
 st.sidebar.header("Filters")
 eng = st.sidebar.multiselect("Engagement status", ["Active", "Inactive"], default=["Active", "Inactive"])
 prod = st.sidebar.slider("Number of products", 1, 4, (1, 4))
-bal = st.sidebar.slider("Balance range", 0, int(df_all.Balance.max()), (0, int(df_all.Balance.max())), step=5000)
-sal = st.sidebar.slider("Estimated salary range", 0, int(df_all.EstimatedSalary.max()), (0, int(df_all.EstimatedSalary.max())), step=5000)
+bal = st.sidebar.slider("Balance range", 0, int(df_all.Balance.max()) + 1, (0, int(df_all.Balance.max()) + 1), step=5000)
+sal = st.sidebar.slider("Estimated salary range", 0, int(df_all.EstimatedSalary.max()) + 1, (0, int(df_all.EstimatedSalary.max()) + 1), step=5000)
 geo = st.sidebar.multiselect("Geography", sorted(df_all.Geography.unique()), default=sorted(df_all.Geography.unique()))
 
 df = df_all[
