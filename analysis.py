@@ -2,7 +2,7 @@
 import numpy as np
 import pandas as pd
 
-DATA_PATH = "data/European_Bank.csv"
+DATA_PATH = "European_Bank.csv"
 
 def load_data(path=DATA_PATH):
     df = pd.read_csv(path)
